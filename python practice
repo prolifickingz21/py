@@ -1,0 +1,18 @@
+bank_balance = 100.00
+item_cost = 100.00
+item_inventory = 0
+
+if item_cost < bank_balance and item_inventory >= 1:
+    bank_balance -= item_cost
+    print('transaction successful')
+    print(bank_balance)
+elif item_cost == bank_balance and item_inventory >= 1:
+    bank_balance -= item_cost
+    print("transaction successful, but no funds left")
+    print(bank_balance)
+else:
+    if item_inventory < 1:
+        print("not enough inventory")
+    else:
+        print("transaction failed, insufficient funds")
+    print(bank_balance)
